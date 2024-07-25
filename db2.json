@@ -1,0 +1,106 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Iphone 10 Pro Max",
+      "price": 1000,
+      "content": "This is description or content of this product, .....",
+      "categoryName": "Iphone",
+      "status": "inActive"
+    },
+    {
+      "id": 2,
+      "name": "Iphone 13 Pro Max",
+      "price": 1500,
+      "content": "This is description or content of this product, .....",
+      "categoryName": "Iphone",
+      "status": "inActive"
+    },
+    {
+      "id": 3,
+      "name": "Iphone 14 Pro Max",
+      "price": 2000,
+      "content": "This is description or content of this product, .....",
+      "categoryName": "Iphone",
+      "status": "new"
+    },
+    {
+      "id": 4,
+      "name": "Iphone 15 Pro Max",
+      "price": 4000,
+      "content": "This is description or content of this product, .....",
+      "categoryName": "Iphone",
+      "status": "active"
+    },
+    {
+      "id": 5,
+      "name": "Nokia 1080",
+      "price": "5000",
+      "content": "This is description or content of this product, .....",
+      "categoryName": "Nokia",
+      "status": "active"
+    },
+    {
+      "id": 6,
+      "name": "Nokia 2080",
+      "price": "6000",
+      "content": "Test",
+      "categoryName": "Nokia",
+      "status": "new"
+    },
+    {
+      "id": 7,
+      "name": "Samsung Note",
+      "price": "7000",
+      "content": "Test",
+      "categoryName": "Samsung",
+      "status": "active"
+    },
+    {
+      "id": 8,
+      "name": "Samsung Galaxy",
+      "price": "7000",
+      "content": "Test",
+      "categoryName": "Samsung",
+      "status": "active"
+    },
+    {
+      "id": 9,
+      "name": "Iphone 17 Pro Max",
+      "price": "6000",
+      "content": "Test",
+      "categoryName": "Iphone",
+      "status": "new"
+    },
+    {
+      "id": 10,
+      "name": "Iphone 18 Pro Max",
+      "price": "7000",
+      "content": "Test",
+      "categoryName": "Iphone",
+      "status": "new"
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "name": "Iphone",
+      "status": "inActive"
+    },
+    {
+      "id": 2,
+      "name": "Samsung",
+      "status": "active"
+    },
+    {
+      "id": 3,
+      "name": "Nokia",
+      "status": "active"
+    },
+    {
+      "id": 4,
+      "name": "Oppo",
+      "status": "active"
+    }
+  ]
+}
