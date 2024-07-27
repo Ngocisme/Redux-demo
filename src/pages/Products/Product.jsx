@@ -9,7 +9,10 @@ import {
   selectProductError,
   selectProductStatus,
 } from "../../features/products/productsSelector";
-import { fetchAllProducts } from "../../features/products/productsApi";
+import {
+  deleteProduct,
+  fetchAllProducts,
+} from "../../features/products/productsApi";
 
 const Product = () => {
   const dispatch = useDispatch();
@@ -24,6 +27,10 @@ const Product = () => {
       dispatch(fetchAllProducts());
     }
   }, [status, dispatch]);
+
+  const handleDelete = (productId) => {
+    dispatch(deleteProduct(productId));
+  };
 
   return (
     <>
@@ -97,10 +104,12 @@ const Product = () => {
                 <th>Action</th>
               </tr>
             </thead>
-            <tbody>
-              {listProducts.map((product) => {
-                return (
-                  <>
+            {error ? (
+              <div className="text-danger">{error}</div>
+            ) : (
+              <tbody>
+                {listProducts.map((product) => {
+                  return (
                     <tr key={product.id}>
                       <td>{product.id}</td>
                       <td>{product.name}</td>
@@ -118,26 +127,18 @@ const Product = () => {
                           Details
                         </Button>{" "}
                         || <Button variant="info">Update</Button> ||{" "}
-                        <Button variant="danger">Delete</Button>
+                        <Button
+                          variant="danger"
+                          onClick={() => handleDelete(product.id)}
+                        >
+                          Delete
+                        </Button>
                       </td>
                     </tr>
-                  </>
-                );
-              })}
-              {/* <tr>
-                <td>mẫu</td>
-                <td>mẫu</td>
-                <td>mẫu</td>
-                <td>mẫu</td>
-                <td>mẫu</td>
-                <td>mẫu</td>
-                <td>
-                  <Button variant="success">Details</Button> ||{" "}
-                  <Button variant="info">Update</Button> ||{" "}
-                  <Button variant="danger">Delete</Button>
-                </td>
-              </tr> */}
-            </tbody>
+                  );
+                })}
+              </tbody>
+            )}
           </Table>
         </Row>
       </div>
