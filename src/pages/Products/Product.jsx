@@ -28,8 +28,9 @@ const Product = () => {
     }
   }, [status, dispatch]);
 
-  const handleDelete = (productId) => {
-    dispatch(deleteProduct(productId));
+  const handleDelete = async(productId) => {
+    await dispatch(deleteProduct(productId));
+          dispatch(fetchAllProducts())
   };
 
   return (
